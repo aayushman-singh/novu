@@ -128,7 +128,7 @@ export async function bootstrap(
     process.exit(1);
   });
 
-  await app.listen(process.env.PORT || 3000);
+  await app.listen(process.env.PORT || 3000, process.env.HOST || '0.0.0.0');
 
   app.enableShutdownHooks();
 
